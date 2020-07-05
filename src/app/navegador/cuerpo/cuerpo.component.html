@@ -1,0 +1,19 @@
+<div class="map-container">
+  <div class="text-primary text-center align-top">{{titulo}}
+  <img src="assets/images/donwload2.png" [hidden] = "!mostrarBoton" class="img-fluid img-thumbnail"
+    style="max-width:80px;" (click)="descargarGPX()"/>
+  </div>
+  <div><button  [hidden] = "!mostrarBoton"
+    type="button" class="btn btn-info" (click)="mostrarEstadisticas()">Estadisticas</button></div>
+
+  <div [hidden]="!mostrar" >
+    Distancia: {{distancia/1000 | number:'1.2-2'}} Km
+    - Velocidad media: {{velocidadMedia | number:'1.2-2'}} Km/h
+    - Tiempo en movimiento: {{((tiempoMovimiento/1000)/60)/60 | number:'1.2-2'}} Horas
+    - Desnivel acumulado: {{elevacionGanada | number:'1.2-2'}} Metros
+  </div>
+  <div class="map-frame">
+    <div id="map"></div>
+  </div>
+  <div>{{desc}}</div>
+</div>

@@ -1,0 +1,5 @@
+<div class="container">
+  <div *ngFor="let ruta of rutas" >
+    <a [routerLink]="['/mapa', ruta.id]">{{ruta.titulo}}</a>
+  </div>
+</div>

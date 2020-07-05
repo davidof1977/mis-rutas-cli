@@ -1,0 +1,7 @@
+<div class="container">
+    <ul class="nav">
+      <li class="nav-item" *ngFor="let ruta of rutas">
+        <button (click)="notificaRuta(ruta.id)" class="btn btn-link" >{{ruta.titulo}}</button>
+      </li>
+    </ul>
+</div>
