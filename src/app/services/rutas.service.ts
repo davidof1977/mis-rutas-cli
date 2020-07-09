@@ -9,7 +9,8 @@ export class RutasService {
 
   constructor(private http: HttpClient) { }
 
-  url = 'http://localhost:9081/misrutas/api';
+  //url = 'http://localhost:9081/misrutas/api';
+  url = 'https://mis-rutas-davidof1977.herokuapp.com/misrutas/api';
 
   getRutasUsuario(usuario: string){
     const api = 'rutas';
