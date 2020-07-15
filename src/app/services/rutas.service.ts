@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Ruta } from '../model/ruta';
@@ -9,12 +10,11 @@ export class RutasService {
 
   constructor(private http: HttpClient) { }
 
-  //url = 'http://localhost:9081/misrutas/api';
-  url = 'https://mis-rutas-davidof1977.herokuapp.com/misrutas/api';
+   url = environment.baseUrl + '/api';
 
-  getRutasUsuario(usuario: string){
+  getRutasUsuario(){
     const api = 'rutas';
-    return this.http.get<Ruta[]>(this.url + '/' + api + '/' + usuario);
+    return this.http.get<Ruta[]>(this.url + '/' + api);
   }
 
   getRuta(id: string){

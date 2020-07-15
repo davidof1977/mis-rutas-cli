@@ -13,7 +13,7 @@ export class MisrutasComponent implements OnInit {
   constructor(private service: RutasService, private router: Router) { }
   rutas: Ruta[];
   ngOnInit(): void {
-    this.service.getRutasUsuario('Davidof1977').subscribe( respuesta => {
+    this.service.getRutasUsuario().subscribe( respuesta => {
       this.rutas = respuesta;
     });
   }
